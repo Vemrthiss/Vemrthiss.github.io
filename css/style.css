@@ -69,11 +69,13 @@ html {
   @media only screen and (max-width: 37.5em) {
     .game-field {
       grid-template-columns: repeat(3, 15vh);
-      grid-template-rows: repeat(3, 15vh); } }
+      grid-template-rows: repeat(3, 15vh);
+      gap: 1rem; } }
   @media only screen and (max-width: 25em) {
     .game-field {
       grid-template-columns: repeat(3, 12vh);
-      grid-template-rows: repeat(3, 12vh); } }
+      grid-template-rows: repeat(3, 12vh);
+      gap: 1.2rem; } }
 
 .btn {
   padding: 1rem;
