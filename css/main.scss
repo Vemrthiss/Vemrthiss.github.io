@@ -14,13 +14,16 @@ html {
 }
 
 .header {
-    //height: 25vh;
     text-align: center;
     font-size: 1.5rem;
     padding: 3px;
     background: #f2709c;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ff9472, #f2709c);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #ff9472, #f2709c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    @media only screen and (max-width: 37.5em){ //600px
+        font-size: 1.8rem;
+    }
 
     &__title {
         text-transform: uppercase;
@@ -87,18 +90,24 @@ html {
     grid-template-columns: repeat(3, 18.5vh);
     grid-template-rows: repeat(3, 18.5vh);
     gap: .7rem;
+    -webkit-gap: .7rem;
+    -o-gap: .7rem;
     justify-content: center;
 
     @media only screen and (max-width: 37.5em) { //600px
         grid-template-columns: repeat(3, 15vh);
         grid-template-rows: repeat(3, 15vh);
         gap: 1rem;
+        -webkit-gap: 1rem;
+        -o-gap: 1rem;
     }
 
     @media only screen and (max-width: 25em) { //400px
         grid-template-columns: repeat(3, 12vh);
         grid-template-rows: repeat(3, 12vh);
         gap: 1.2rem;
+        -webkit-gap: 1.2rem;
+        -o-gap: 1.2rem;
     }
 }
 
@@ -129,16 +138,16 @@ html {
             width: 22vw;
         }
 
-        @media only screen and (max-width: 37.5em){ //600px
-            width: 25vw;
-        }
-
-        @media only screen and (max-width: 31.25em){ //500px
-            font-size: 1rem;
+        @media only screen and (max-width: 43.75em){ //700px
+            font-size: 1.4rem;
         }
 
         @media only screen and (max-width: 37.5em){ //600px
             width: 25vw;
+        }
+
+        @media only screen and (max-width: 22em){ //around 350px
+            font-size: 1.2rem;
         }
 
         &:hover {
@@ -178,5 +187,17 @@ html {
             visibility: hidden;
             opacity: 0;
         }
+    }
+}
+
+.footer {
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: #eee;
+    padding: 1rem;
+    margin-top: 1rem;
+
+    @media only screen and (max-width: 37.5em) { //600px
+        font-size: 1.4rem;
     }
 }
